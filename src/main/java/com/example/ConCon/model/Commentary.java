@@ -6,25 +6,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class Commentary { // Changed from 'Favorite' to 'Commentary'
-    private List<Product> productsCommentary; // Changed from 'produtosFavorite' to 'productsCommentary'
-    private int nameCommentaryList; // Changed from 'nameFavoriteList' to 'nameCommentaryList'
+public class Commentary { 
+    private List<Product> productsCommentary; 
+    private int nameCommentaryList; 
 
-    // Default constructor
+    
     public Commentary() {
         this.productsCommentary = new ArrayList<>();
     }
 
-    // Getter and setter for 'productsCommentary'
+    
     public List<Product> getProductsCommentary() {
-        return new ArrayList<>(productsCommentary); // Return a copy of the list to prevent direct modification
+        return new ArrayList<>(productsCommentary);
     }
 
     public void setProductsCommentary(List<Product> productsCommentary) {
-        this.productsCommentary = new ArrayList<>(productsCommentary); // Set a copy of the provided list to prevent direct modification
+        this.productsCommentary = new ArrayList<>(productsCommentary); 
     }
 
-    // Getter and setter for 'nameCommentaryList'
+   
     public int getNameCommentaryList() {
         return nameCommentaryList;
     }
