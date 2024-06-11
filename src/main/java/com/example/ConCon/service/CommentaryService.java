@@ -24,9 +24,9 @@ public class CommentaryService {
         DocumentReference documentReference = db.getFirebase().collection("Commentary").document(nameCommentary);
         ApiFuture<DocumentSnapshot> future = documentReference.get();
         DocumentSnapshot document = future.get();
-        Commentary commentary; // Changed from 'Favorite' to 'Commentary'
+        Commentary commentary; 
         if (document.exists()) {
-            commentary = document.toObject(Commentary.class); // Changed from 'Favorite' to 'Commentary'
+            commentary = document.toObject(Commentary.class); 
             return null;
         }
         return null;
@@ -54,7 +54,7 @@ public class CommentaryService {
         CollectionReference commentaryCollection = db.getFirebase().collection("Commentary"); 
         ApiFuture<QuerySnapshot> querySnapshot = commentaryCollection.get();
         for (DocumentSnapshot doc : querySnapshot.get().getDocuments()) {
-            Commentary commentary = doc.toObject(Commentary.class); // Changed from 'Favorite' to 'Commentary'
+            Commentary commentary = doc.toObject(Commentary.class); //
             commentaryList.add(commentary);
         }
         return commentaryList;
