@@ -42,11 +42,11 @@ public class CommentaryController {
 
     @DeleteMapping("/commentaries/{id}") 
     public String removeCommentary(@PathVariable String id) throws ExecutionException, InterruptedException {
-        return commentaryService.deleteCommentary(id); // Changed from 'removeFavorite' to 'removeCommentary'
+        return commentaryService.deleteCommentary(id); 
     }
 
-    @PutMapping("/commentaries/{id}") // Changed from '/favorites' to '/commentaries'
+    @PutMapping("/commentaries/{id}") 
     public String updateCommentary(@PathVariable String id, @RequestBody Commentary commentary) throws ExecutionException, InterruptedException {
-        return commentaryService.updateCommentary(commentary); // Changed from 'updateFavorite' to 'updateCommentary'
+        return commentaryService.updateCommentary(commentary); 
     }
 }
